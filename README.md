@@ -139,57 +139,57 @@ The following scripts/commands should be available in every project:
 ## Folder structure
 
 - `domainname.tld`
-- `develop`
-    - `js`
-        - `components`
-            - `a-*.js`
-            - `t-*.js`
-            - `m-*.js`
-            - `o-*.js`
-        - `config`
-            - `*.js`
-        - `libraries`
-            - `*.js`
-        - `index.js`
-        - `*.js`
-    - `scss`
-        - `components`
-            - `_a-*.scss`
-            - `_t-*.scss`
-            - `_m-*.scss`
-            - `_o-*.scss`
-        - `configs`
-            - `_reset.scss`
-            - `_variables.scss`
-        - `fonts`
-            - `_*.scss`
-        - `libraries`
-            - `_*.scss`
-        - `index.scss`
-        - `*.scss`
-- `public`
-    - `assets`
-        - `css`
-            - `index.css`
-            - `*.scss`
-        - `fonts`
-            - `*.woff2`
-        - `images`
-            - `apple-touch-icon.png`
-            - `favicon.png`
-            - `*.webp`
-            - `*.svg`
+    - `develop`
         - `js`
+            - `components`
+                - `a-*.js`
+                - `t-*.js`
+                - `m-*.js`
+                - `o-*.js`
+            - `config`
+                - `*.js`
+            - `libraries`
+                - `*.js`
             - `index.js`
             - `*.js`
-    - `index.[html|php]`
-- `.babelrc`
-- `.browserslistrc`
-- `.connect-to-server`
-- `.editorconfig`
-- `.eslintrc`
-- `.gitignore`
-- `package.json`
+        - `scss`
+            - `components`
+                - `_a-*.scss`
+                - `_t-*.scss`
+                - `_m-*.scss`
+                - `_o-*.scss`
+            - `configs`
+                - `_reset.scss`
+                - `_variables.scss`
+            - `fonts`
+                - `_*.scss`
+            - `libraries`
+                - `_*.scss`
+            - `index.scss`
+            - `*.scss`
+    - `public`
+        - `assets`
+            - `css`
+                - `index.css`
+                - `*.scss`
+            - `fonts`
+                - `*.woff2`
+            - `images`
+                - `apple-touch-icon.png`
+                - `favicon.png`
+                - `*.webp`
+                - `*.svg`
+            - `js`
+                - `index.js`
+                - `*.js`
+        - `index.[html|php]`
+    - `.babelrc`
+    - `.browserslistrc`
+    - `.connect-to-server`
+    - `.editorconfig`
+    - `.eslintrc`
+    - `.gitignore`
+    - `package.json`
 
 
 ## Appendix
