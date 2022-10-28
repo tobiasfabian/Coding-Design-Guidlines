@@ -1,0 +1,51 @@
+.a-text {
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+
+  --typo-leading-remainder: calc((var(--line-height) - 1) / 2);
+  --typo-leading-top: calc(var(--typo-whitespace-top) + var(--typo-leading-remainder));
+  --typo-leading-bottom: calc(var(--typo-whitespace-bottom) + var(--typo-leading-remainder));
+  --typo-margin-top: calc(-1 * var(--typo-leading-top) * var(--font-size));
+  --typo-margin-bottom: calc(-1 * var(--typo-leading-bottom) * var(--font-size));
+
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5 {
+    --line-height: var(--line-height-heading);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+  }
+
+  > h2 {
+    --font-size: var(--font-size-h2);
+    --line-height: var(--line-height-h2);
+  }
+
+  > * + * {
+    margin-block-start: calc(var(--gap-block) * 0.75 + var(--typo-margin-top) + var(--typo-margin-bottom));
+  }
+  > * + .a-typo {
+    margin-block-start: calc(var(--gap-block) + var(--typo-margin-bottom));
+  }
+  > .a-typo + * {
+    margin-block-start: calc(var(--gap-block) * 0.75 + var(--typo-margin-top));
+  }
+
+  &.-huge {
+    --font-size: var(--font-size-huge);
+    --line-height: var(--line-height-huge);
+  }
+
+  & + & {
+    margin-block-start: calc(var(--font-size) * var(--line-height));
+  }
+  &.-huge + & {
+    margin-block-start: var(--gap-block);
+  }
+
+  .a-heading + & {
+    margin-block-start: var(--gap-block);
+  }
+}
