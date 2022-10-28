@@ -22,7 +22,7 @@ Example: `m-alert-banner`
 The name of the *Element* is separated by `__`.  
 Example `m-alert-banner__heading`
 
-The name of a *Modifier* is preceded by `-`. (e.g. `-danger`). The *Modifier* isn’t hard wired to the *Element* (in pure BEM it would be `m-alert-banner--danger`). This must be taken into account. The pros and cons of this technique are described in [ABEM. A more useful adaptation of BEM. – CSS-Tricks](https://css-tricks.com/abem-useful-adaptation-bem/).
+The name of a *Modifier* is preceded by `-`. (e.g. `-danger`). The *Modifier* isn’t hard wired to the *Element* (in pure BEM it would be `m-alert-banner--danger`). This must be taken into account. The pros and cons of this technique are described in [ABEM. A more useful adaptation of BEM. – CSS-Tricks](https://css-tricks.com/abem-useful-adaptation-bem/#aa-abem-modifier-issues).
 
 Generally names should describe the function not the appearance. Names should be as general as possible but as specific as needed. A red “delete item” button should have get a `-danger` *Modifier*. `-red` is describing the appearance. `-delete` is too specific, `-danger` is more generic.
 
@@ -64,6 +64,14 @@ Each block get’s its own file (e.g. `components/_m-alert-banner.scss`. The fil
   }
 }
 ```
+#### Element with Block Modifier
+```scss
+.m-alert-banner__heading {
+  .m-alert-banner.-danger & {
+    …
+  }
+}
+```
 
 ### CSS selectors
 
@@ -96,7 +104,9 @@ The rules inside of a *Block*/*Element* could be very long that’s why a specif
   `> h1`
 - [Adjacent sibling combinator](https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator) in combination with *Child combinator*   
   This is used to define how elements behave against other elements. E.g. the `margin-block-start` of a `p` element after a `h1` element. (See [The Stack: Every Layout](https://every-layout.dev/layouts/stack/))  
-  `> h1 + p`  
+  `> h1 + p` 
+- *Modifiers* ([Element with Block Modifier](#element-with-block-modifier))  
+  `.m-alert-banner.-danger &`
 - *Modifiers*  
   `&.-danger`
 - `@supports` rules
