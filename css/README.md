@@ -177,7 +177,7 @@ The rules inside of a *Block*/*Element* could be very long that’s why a specif
 
 When it’s needed to style a *Block* depended on another *Block*, this could be achieved like this:
 
-```
+```scss
 .a-button {
 
   .m-alert-banner & {
@@ -189,7 +189,7 @@ When it’s needed to style a *Block* depended on another *Block*, this could be
 This syntax should be avoided. What if the `a-button` is inside a `m-dialog` (which is inside of `m-alert-banner`). `a-button` will get the background-color which might not be the intended behavior.  
 Modifiers should be used instead.
 
-```
+```scss
 .a-button {
 
   &.-alert {
