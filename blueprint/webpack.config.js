@@ -3,6 +3,7 @@ const path = require('path');
 module.exports = {
   entry: {
     index: './develop/js/index.js',
+    // add more js files here.
   },
   mode: 'production', // use 'none' to debug IE
   devtool: 'source-map',
