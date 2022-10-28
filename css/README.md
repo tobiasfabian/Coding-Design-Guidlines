@@ -89,7 +89,7 @@ The rules inside of a *Block*/*Element* could be very long that’s why a specif
 
 - [`@keyframes`](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes)
 - Properties  
-  See *Order of properties*
+  See [*Order of properties*](#order-of-properties)
 - [Pseudeo-elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)  
   `&::after`, `::backdrop`
 - [Child combinator](https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator)  
