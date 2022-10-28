@@ -15,7 +15,7 @@
 
 The coding guidelines are based on [Atomic Design](https://atomicdesign.bradfrost.com) by Brad Frost. For structuring individual components I use [BEM](https://getbem.com) (Block, Element, Modifier). Atomic Design in combination with BEM was described by Daniel Tonon ([ABEM. A more useful adaptation of BEM](https://css-tricks.com/abem-useful-adaptation-bem/)).
 
-The terms *block* (BEM method) and *component* (Atomic Design) have the same meaning for these design guidelines and are used interchangeably.
+The terms *Block* (BEM method) and *Component* (Atomic Design) have the same meaning for these design guidelines and are used interchangeably.
 
 Atomic Design distinguishes between the following *Components*.
 - **Atoms** (`a`)
