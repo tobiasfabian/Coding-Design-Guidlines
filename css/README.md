@@ -136,12 +136,6 @@ The rules inside of a *Block*/*Element* could be very long that’s why a specif
     margin-block-start: 1rem;
   }
   
-  &:focus-inside {
-    > h2 {
-      …
-    }
-  }
-  
   &.-danger {
     …
   }
@@ -154,6 +148,12 @@ The rules inside of a *Block*/*Element* could be very long that’s why a specif
     }
   }
   
+  &:focus-inside {
+    > h2 {
+      …
+    }
+  }
+
   & + & {
     margin-block-start: 1rem;
   }
