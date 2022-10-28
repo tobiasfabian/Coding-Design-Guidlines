@@ -158,6 +158,10 @@ The rules inside of a *Block*/*Element* could be very long that’s why a specif
     margin-block-start: 1rem;
   }
   
+  .m-form + & {
+    …
+  }
+  
   @media (min-width: …) {
     …
   }
