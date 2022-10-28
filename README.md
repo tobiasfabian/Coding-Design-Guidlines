@@ -41,7 +41,7 @@ An *Atom* (`a`) component called *field*.
 ```
 
 <details>
-<summary>CSS: `/develop/scss/components/_a-field.scss`</summary>
+<summary>CSS: <code>/develop/scss/components/_a-field.scss</code></summary>
 
 ```scss
 .a-field {
@@ -64,7 +64,7 @@ An *Atom* (`a`) component called *field*.
 </details>
 
 <details>
-<summary>JavaScript: `/develop/js/components/a-field.js`</summary>
+<summary>JavaScript: <code>/develop/js/components/a-field.js</code></summary>
 
 ```js
 class AField {
