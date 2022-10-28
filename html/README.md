@@ -1,6 +1,6 @@
 ## Spaces
 
-Zur besseren Gruppierung kann zwischen zwei Elementen eine Zeile frei gelassen werden. Zwei leere Zeilen sind nicht erlaubt. Vor einem schließenden Tag ist keine Leerzeile erlaubt.
+For better grouping, one line can be left blank between two elements. Two blank lines are not allowed. No blank line is allowed before a closing tag.
 
 ```html
 <header>
@@ -25,7 +25,7 @@ Zur besseren Gruppierung kann zwischen zwei Elementen eine Zeile frei gelassen w
 
 ## Attributes
 
-Normalerweise werden Attributes inline geschrieben. Sollten es mehr als drei Attribute geben, werden die Attribute untereinander geschrieben.
+Normally attributes are written inline. If there are more than three attributes, the attributes are written one below the other.
 
 ```html
 <header
@@ -52,7 +52,7 @@ Normalerweise werden Attributes inline geschrieben. Sollten es mehr als drei Att
 
 ## Class Attribute
 
-Sollte ein HTML-Element gleichzeitig ein *Block* und *Element* (BEM-Methology) sein, wird zuerst der *Block* geschrieben, dann der *Modifier* des *Blocks*, dann das *Element* und zuletzt der *Modifier* des *Elements*. Bei Bedarf kann der Value des Class-Attributes auch untereinander geschrieben werden.
+If an HTML element is both a *block* and an *element* (BEM methology), the *block* is written first, then the *modifier* of the *block*, then the *element* and finally the *modifier* of the *element*. If necessary, the value of the class attribute can also be written one below the other.
 
 ```html
 <a 
