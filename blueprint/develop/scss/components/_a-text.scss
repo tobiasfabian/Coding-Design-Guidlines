@@ -26,10 +26,10 @@
   > * + * {
     margin-block-start: calc(var(--gap-block) * 0.75 + var(--typo-margin-top) + var(--typo-margin-bottom));
   }
-  > * + .a-typo {
+  > * + .a-leading-trim {
     margin-block-start: calc(var(--gap-block) + var(--typo-margin-bottom));
   }
-  > .a-typo + * {
+  > .a-leading-trim + * {
     margin-block-start: calc(var(--gap-block) * 0.75 + var(--typo-margin-top));
   }
 

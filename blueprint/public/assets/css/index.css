@@ -225,10 +225,10 @@ h5.a-heading,
 .a-text > * + * {
   margin-block-start: calc(var(--gap-block) * 0.75 + var(--typo-margin-top) + var(--typo-margin-bottom));
 }
-.a-text > * + .a-typo {
+.a-text > * + .a-leading-trim {
   margin-block-start: calc(var(--gap-block) + var(--typo-margin-bottom));
 }
-.a-text > .a-typo + * {
+.a-text > .a-leading-trim + * {
   margin-block-start: calc(var(--gap-block) * 0.75 + var(--typo-margin-top));
 }
 .a-text.-huge {
@@ -261,7 +261,7 @@ h5.a-heading,
   --typo-whitespace-bottom: calc(var(--typo-shoulder) - var(--typo-whitespace-top));
 }
 
-.a-typo {
+.a-leading-trim {
   --typo-leading-remainder: calc((var(--line-height) - 1) / 2);
   --typo-leading-top: calc(var(--typo-whitespace-top) + var(--typo-leading-remainder));
   --typo-leading-bottom: calc(var(--typo-whitespace-bottom) + var(--typo-leading-remainder));
@@ -269,15 +269,15 @@ h5.a-heading,
   --typo-margin-bottom: calc(-1 * var(--typo-leading-bottom) * var(--font-size));
   display: flow-root;
 }
-.a-typo::before, .a-typo::after {
+.a-leading-trim::before, .a-leading-trim::after {
   content: "";
   display: block;
   visibility: hidden;
 }
-.a-typo::before {
+.a-leading-trim::before {
   margin-block-start: var(--typo-margin-top);
 }
-.a-typo::after {
+.a-leading-trim::after {
   margin-block-end: var(--typo-margin-bottom);
 }
 
