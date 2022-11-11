@@ -4,7 +4,8 @@
 }
 
 html {
-  font-size: 62.5%; // 1rem equals 10px, when 16px is default font-size
+  /* 1rem equals 10px, when 16px is default font-size */
+  font-size: 62.5%;
   -webkit-text-size-adjust: none;
   color-scheme: dark light;
 }

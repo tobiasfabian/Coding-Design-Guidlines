@@ -1,9 +1,9 @@
 // Fonts
 @import 'fonts/FONT_NAME';
 
-// Config
-@import 'config/reset';
-@import 'config/variables';
+// framework
+@import 'framework/reset';
+@import 'framework/variables';
 
 // Templates
 @import 'components/t-default';
@@ -30,4 +30,4 @@
 // @import 'components/o-main-nav';
 
 // HELPER/DEBUG
-@import 'config/GRID';
+@import 'framework/GRID';
