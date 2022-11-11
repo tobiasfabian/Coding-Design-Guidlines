@@ -9,11 +9,16 @@ html {
   -webkit-text-size-adjust: none;
   color-scheme: dark light;
 }
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
 
 body {
   margin: 0;
-  block-size: 100%;
-  block-size: 100dvb;
+  min-block-size: 100%;
+  min-block-size: 100dvb;
   line-height: 1.5;
   font-family: system-ui, sans-serif;
   font-size: 1.6rem;
