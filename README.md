@@ -146,7 +146,7 @@ The following scripts/commands should be available in every project:
                 - `t-*.js`
                 - `m-*.js`
                 - `o-*.js`
-            - `config`
+            - `framework`
                 - `*.js`
             - `libraries`
                 - `*.js`
@@ -158,11 +158,10 @@ The following scripts/commands should be available in every project:
                 - `_t-*.scss`
                 - `_m-*.scss`
                 - `_o-*.scss`
-            - `configs`
+            - `framework`
+                - `_fonts.scss`
                 - `_reset.scss`
                 - `_variables.scss`
-            - `fonts`
-                - `_*.scss`
             - `libraries`
                 - `_*.scss`
             - `index.scss`
