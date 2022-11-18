@@ -23,7 +23,8 @@ The name of the *Element* is separated by `__`.
 Example: `m-alert-banner__heading`
 
 ### Modifier
-The name of a *Modifier* is preceded by `-`. (e.g. `-danger`). The *Modifier* isn’t hard wired to the *Element* (in pure BEM it would be `m-alert-banner--danger`). This must be taken into account. The pros and cons of this technique are described in [ABEM. A more useful adaptation of BEM. – CSS-Tricks](https://css-tricks.com/abem-useful-adaptation-bem/#aa-abem-modifier-issues).
+The name of a *Modifier* is preceded by `-`. (e.g. `-danger`). The *Modifier* isn’t hard wired to the *Element* (in pure BEM it would be `m-alert-banner--danger`). This must be taken into account. The pros and cons of this technique are described in [ABEM. A more useful adaptation of BEM. – CSS-Tricks](https://css-tricks.com/abem-useful-adaptation-bem/#aa-abem-modifier-issues).  
+Example: `a-button -danger`
 
 ### Function over appearance
 Generally names should describe the function not the appearance. Names should be as general as possible but as specific as needed. A red “delete item” button should get a *Modifier* called `-danger` instead of `-red`. `-red` is describing the appearance. `-delete` is too specific, `-danger` is more generic.
