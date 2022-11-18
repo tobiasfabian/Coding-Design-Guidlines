@@ -20,13 +20,41 @@ Each *Block* must have a prefix (`a`, `m`, `o` or `t`, according to Atomic Desig
 Example: `m-alert-banner`
 
 The name of the *Element* is separated by `__`.  
-Example `m-alert-banner__heading`
+Example: `m-alert-banner__heading`
 
+### Modifier
 The name of a *Modifier* is preceded by `-`. (e.g. `-danger`). The *Modifier* isn’t hard wired to the *Element* (in pure BEM it would be `m-alert-banner--danger`). This must be taken into account. The pros and cons of this technique are described in [ABEM. A more useful adaptation of BEM. – CSS-Tricks](https://css-tricks.com/abem-useful-adaptation-bem/#aa-abem-modifier-issues).
 
-Generally names should describe the function not the appearance. Names should be as general as possible but as specific as needed. A red “delete item” button should have get a `-danger` *Modifier*. `-red` is describing the appearance. `-delete` is too specific, `-danger` is more generic.
+### Function over appearance
+Generally names should describe the function not the appearance. Names should be as general as possible but as specific as needed. A red “delete item” button should get a *Modifier* called `-danger` instead of `-red`. `-red` is describing the appearance. `-delete` is too specific, `-danger` is more generic.
 
-The same rule comes into play for *variables*. E.g. `--color-negative` or `--color-postive` (instead of `--color-red` and `--color-green`).  
+### Variables
+Variables should be named after the property for which they are intended.  
+Example: `--transition-duration: 300ms` instead of `--transition: 300ms`.  
+`--transition: opacity 200ms linear` is fine, beacuse it describes the whole transition property.
+
+Most of the time, variables are meant for a specific *thing*. To describe this specific *thing*, use `--` to separate the attribute name from the *thing*.  
+Example: `--transition-duration--popup: 500ms`
+
+For *variables*, the rule that function is preferable over appearance also applies. 
+Example: `--font-family--heading` instead of `--font-family--serif`.
+
+<details>
+<summary><strong>Colors</strong></summary>
+
+Colors can be named according to their appearance. You should use `--color--red` if you want something to be red. But if you want to indicate that something might have a negative effect, you should use `--color--negative`. This could be an alias of `--color--red`.
+
+For graduations of colors you should use the numbers used for `font-weight`, where 500 should be the default color.
+
+```css
+--color--red-300: hsl(0, 90%, 70%);
+--color--red-400: hsl(0, 90%, 60%);
+--color--red-500: hsl(0, 90%, 50%);
+--color--red-600: hsl(0, 90%, 40%);
+--color--red: var(--color--red-600);
+--color--negative: var(--color--red);
+```
+</details>
 
 
 ## Nesting
@@ -130,6 +158,7 @@ The rules inside of a *Block*/*Element* could be very long that’s why a specif
   }
   
   --var-lorem: …;
+
   padding: 1rem;
   border: 2px solid var(--color-alert);
   animation-name: pulse;
@@ -220,7 +249,7 @@ To add specific styles for smaller devices the `(min-width)` rule can be negated
 
 SCSS comes with great features like *Variables*, *Mixins*, *Extend/Inheritance* and *Math Operators*. These features have their merits, but they are not needed for this Style Guide. They partly contradict the modular idea of BEM and Atomic Design (*Mixins*, *Extend/Inheritance*). Other features like *Variables* and *Math Operators* have their counterpart in plain CSS nowadays, which should always be preferred.
 
-Some day in the future [CSS Nesting](https://caniuse.com/css-nesting) could be used, then SCSS is not needed anymore.
+At some point in the future, [CSS Nesting](https://caniuse.com/css-nesting) may be used, at which point SCSS will no longer be needed.
 
 
 ## Order of properties
