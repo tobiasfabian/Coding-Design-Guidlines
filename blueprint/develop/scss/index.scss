@@ -4,9 +4,7 @@
 // framework
 @import 'framework/reset';
 @import 'framework/variables';
-
-// Templates
-@import 'components/t-default';
+@import 'framework/GRID'; // HELPER/DEBUG
 
 // Atoms
 // @import 'components/a-button';
@@ -29,5 +27,5 @@
 @import 'components/o-footer';
 // @import 'components/o-main-nav';
 
-// HELPER/DEBUG
-@import 'framework/GRID';
+// Templates
+@import 'components/t-default';
