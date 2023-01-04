@@ -51,8 +51,8 @@
 
 # Make sure cache gets revalidated for JavaScript and CSS files
 <FilesMatch ".(js|mjs|css)$">
-	<If "%{HTTP_HOST} in {'example.local' , 'preview.example.com'}">
-  	ExpiresActive Off
-		Header set Cache-Control "no-cache"
-	</If>
+  <If "%{HTTP_HOST} in {'example.local' , 'preview.example.com'}">
+    ExpiresActive Off
+    Header set Cache-Control "no-cache"
+  </If>
 </FilesMatch>
