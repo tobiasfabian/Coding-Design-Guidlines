@@ -1,0 +1,12 @@
+{
+	"name": "tobiaswolf/hashed-url",
+	"description": "Helper function for hashed urls",
+	"version": "1.0.0",
+  "license": "MIT",
+	"authors": [
+	  {
+		  "name": "Tobias Wolf",
+		  "email": "hello@tobiaswolf.de"
+	  }
+  ]
+}

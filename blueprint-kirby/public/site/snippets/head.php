@@ -1,0 +1,30 @@
+<?php
+/**
+ * @var Site $site
+ * @var Page $page
+ */
+?>
+<!doctype html>
+<html lang="<?= $kirby->language()?->code() ?? 'de' ?>">
+
+<head>
+	<meta charset="utf-8">
+
+	<title><?= $page->isHomePage() ? $site->title()->esc('attr') : $page->title()->esc('attr') . ' – ' . $site->title()->esc('attr') ?></title>
+
+	<link rel="apple-touch-icon" href="<?= hashedUrl('/assets/images/apple-touch-icon.png') ?>"><!-- Optional -->
+	<link rel="shortcut icon" href="<?= hashedUrl('/assets/images/favicon.png') ?>">
+
+	<meta name="robots" content="index, follow"><!-- Optional -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="description" content="<?= $page->metaDescription()->esc('attr') ?>">
+	<meta property="og:title" content="<?= $page->title()->esc('attr') ?>">
+	<meta property="og:site_name" content="<?= $site->title()->esc('attr') ?>">
+
+	<meta name="theme-color" content="*"><!-- Optional -->
+
+	<link rel="canonical" href="<?= $page->url() ?>"><!-- Optional -->
+
+	<link rel="stylesheet" href="<?= hashedUrl('/assets/css/index.css') ?>">
+	<script src="<?= hashedUrl('/assets/js/index.js') ?>" defer></script><!-- Optional -->
+</head>

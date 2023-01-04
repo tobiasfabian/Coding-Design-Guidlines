@@ -1,0 +1,32 @@
+.a-heading {
+  --font-size: var(--font-size-h1);
+  --line-height: var(--line-height-heading);
+
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing, normal);
+}
+
+h1.a-heading,
+.a-heading.-h1 {
+  --font-size: var(--font-size-h1);
+  --line-height: var(--line-height-h1);
+  --letter-spacing: var(--leter-spacing-h1);
+}
+h2.a-heading,
+.a-heading.-h2 {
+  --font-size: var(--font-size-h2);
+
+}
+h3.a-heading,
+.a-heading.-h3 {
+  --font-size: var(--font-size-h3);
+}
+h4.a-heading,
+.a-heading.-h4 {
+  --font-size: var(--font-size-h4);
+}
+h5.a-heading,
+.a-heading.-h5 {
+  --font-size: var(--font-size-h5);
+}

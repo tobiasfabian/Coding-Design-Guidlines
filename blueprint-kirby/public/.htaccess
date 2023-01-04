@@ -1,0 +1,100 @@
+# Kirby .htaccess with additions by hello@tobiaswolf.me
+# revision 2022-09-15
+
+# rewrite rules
+<IfModule mod_rewrite.c>
+  # enable awesome urls. i.e.:
+  # http://yourdomain.com/about-us/team
+  RewriteEngine on
+
+  # Redirect to non-www.
+  RewriteCond %{HTTP_HOST} ^www.example.com [NC]
+  RewriteRule ^(.*)$ https://example.com/$1 [L,R=301]
+
+  # Redirect to https
+  RewriteCond %{HTTPS} off
+  RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Enable hashed urls
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.+)\.([\d\w]{8})\.(\w+)$ $1.$3 [L]
+
+  # make sure to set the RewriteBase correctly
+  # if you are running the site in a subfolder;
+  # otherwise links or the entire site will break.
+  #
+  # If your homepage is http://yourdomain.com/mysite,
+  # set the RewriteBase to:
+  #
+  # RewriteBase /mysite
+
+  # In some environments it's necessary to
+  # set the RewriteBase to:
+  #
+  # RewriteBase /
+
+  # block files and folders beginning with a dot, such as .git
+  # except for the .well-known folder, which is used for Let's Encrypt and security.txt
+  RewriteRule (^|/)\.(?!well-known\/) index.php [L]
+
+  # block all files in the content folder from being accessed directly
+  RewriteRule ^content/(.*) index.php [L]
+
+  # block all files in the site folder from being accessed directly
+  RewriteRule ^site/(.*) index.php [L]
+
+  # block direct access to Kirby and the Panel sources
+  RewriteRule ^kirby/(.*) index.php [L]
+
+  # make site links work
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*) index.php [L]
+</IfModule>
+
+# pass the Authorization header to PHP
+SetEnvIf Authorization "(.+)" HTTP_AUTHORIZATION=$1
+
+
+# compress text file responses
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
+
+# cache responses
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 5 seconds"
+  ExpiresByType image/png "access plus 12 months"
+  ExpiresByType image/jpg "access plus 12 months"
+  ExpiresByType image/jpeg "access plus 12 months"
+  ExpiresByType image/webp "access plus 12 months"
+  ExpiresByType image/svg+xml "access plus 12 months"
+  ExpiresByType image/x-icon "access plus 12 months"
+  ExpiresByType text/css "access plus 12 months"
+  ExpiresByType application/javascript "access plus 12 months"
+  ExpiresByType application/font-woff "access plus 12 months"
+  ExpiresByType application/font-woff2 "access plus 12 months"
+</IfModule>
+
+# add correct MIME types
+<IfModule mod_mime.c>
+  AddType application/font-woff .woff
+  AddType application/font-woff2 .woff2
+  AddType application/vnd.apple.mpegurl .m3u8
+  AddType video/mp2t .ts
+</IfModule>
+
+# Make sure cache gets revalidated for JavaScript and CSS files
+<FilesMatch ".(js|mjs|css)$">
+  <If "%{HTTP_HOST} in {'example.local' , 'preview.example.com'}">
+    ExpiresActive Off
+    Header set Cache-Control "no-cache"
+  </If>
+</FilesMatch>
