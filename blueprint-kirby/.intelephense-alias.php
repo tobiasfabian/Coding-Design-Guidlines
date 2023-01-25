@@ -8,67 +8,66 @@
 // https://github.com/bmewburn/vscode-intelephense/issues/600
 
 // cms classes
-class collection extends Kirby\Cms\Collection {}
+class Collection extends Kirby\Cms\Collection {}
 class Block      extends Kirby\Cms\Block {}
 class Blocks     extends Kirby\Cms\Blocks {}
-class field      extends Kirby\Cms\Field {}
-class file       extends Kirby\Cms\File {}
-class files      extends Kirby\Cms\Files {}
-class find       extends Kirby\Cms\Find {}
-class html       extends Kirby\Cms\Html {}
+class Field      extends Kirby\Cms\Field {}
+class File       extends Kirby\Cms\File {}
+class Files      extends Kirby\Cms\Files {}
+class Find       extends Kirby\Cms\Find {}
+class Html       extends Kirby\Cms\Html {}
 class Kirby      extends Kirby\Cms\App {}
 class Page       extends Kirby\Cms\Page {}
 class Pages      extends Kirby\Cms\Pages {}
-class pagination extends Kirby\Cms\Pagination {}
-class r          extends Kirby\Cms\R {}
-class response   extends Kirby\Cms\Response {}
-class s          extends Kirby\Cms\S {}
-class sane       extends Kirby\Sane\Sane {}
+class Pagination extends Kirby\Cms\Pagination {}
+class R          extends Kirby\Cms\R {}
+class Response   extends Kirby\Cms\Response {}
+class S          extends Kirby\Cms\S {}
+class Sane       extends Kirby\Sane\Sane {}
 class Site       extends Kirby\Cms\Site {}
-class structure  extends Kirby\Cms\Structure {}
-class url        extends Kirby\Cms\Url {}
-class user       extends Kirby\Cms\User {}
-class users      extends Kirby\Cms\Users {}
-class visitor    extends Kirby\Cms\Visitor {}
+class Structure  extends Kirby\Cms\Structure {}
+class Url        extends Kirby\Cms\Url {}
+class User       extends Kirby\Cms\User {}
+class Users      extends Kirby\Cms\Users {}
+class Visitor    extends Kirby\Cms\Visitor {}
 
 // data handler
-class data      extends Kirby\Data\Data {}
-class json      extends Kirby\Data\Json {}
-class yaml      extends Kirby\Data\Yaml {}
+class Data      extends Kirby\Data\Data {}
+class Json      extends Kirby\Data\Json {}
+class Yaml      extends Kirby\Data\Yaml {}
 
 // file classes
-class asset      extends Kirby\Filesystem\Asset {}
-class dir        extends Kirby\Filesystem\Dir {}
+class Asset      extends Kirby\Filesystem\Asset {}
+class Dir        extends Kirby\Filesystem\Dir {}
 class F          extends Kirby\Filesystem\F {}
-class mime       extends Kirby\Filesystem\Mime {}
+class Mime       extends Kirby\Filesystem\Mime {}
 
 // data classes
-class database  extends Kirby\Database\Database {}
-class db        extends Kirby\Database\Db {}
+class Database  extends Kirby\Database\Database {}
+class Db        extends Kirby\Database\Db {}
 
 // exceptions
-class errorpageexception extends Kirby\Exception\ErrorPageException {}
+class ErrorPageException extends Kirby\Exception\ErrorPageException {}
 
 // http classes
-class cookie     extends Kirby\Http\Cookie {}
-class header     extends Kirby\Http\Header {}
-class remote     extends Kirby\Http\Remote {}
+class Cookie     extends Kirby\Http\Cookie {}
+class Header     extends Kirby\Http\Header {}
+class Remote     extends Kirby\Http\Remote {}
 
 // image classes
-class dimensions extends Kirby\Image\Dimensions {}
+class Dimensions extends Kirby\Image\Dimensions {}
 
 // panel classes
-class panel      extends Kirby\Panel\Panel {}
+class Panel      extends Kirby\Panel\Panel {}
 
 // toolkit classes
-class a          extends Kirby\Toolkit\A {}
-class c          extends Kirby\Toolkit\Config {}
-class config     extends Kirby\Toolkit\Config {}
-class escape     extends Kirby\Toolkit\Escape {}
-class i18n       extends Kirby\Toolkit\I18n {}
-class obj        extends Kirby\Toolkit\Obj {}
-class str        extends Kirby\Toolkit\Str {}
-class tpl        extends Kirby\Toolkit\Tpl {}
-class v          extends Kirby\Toolkit\V {}
-class xml        extends Kirby\Toolkit\Xml {}
-
+class A          extends Kirby\Toolkit\A {}
+class C          extends Kirby\Toolkit\Config {}
+class Config     extends Kirby\Toolkit\Config {}
+class Escape     extends Kirby\Toolkit\Escape {}
+class I18n       extends Kirby\Toolkit\I18n {}
+class Obj        extends Kirby\Toolkit\Obj {}
+class Str        extends Kirby\Toolkit\Str {}
+class Tpl        extends Kirby\Toolkit\Tpl {}
+class V          extends Kirby\Toolkit\V {}
+class Xml        extends Kirby\Toolkit\Xml {}
