@@ -1,8 +1,16 @@
 .GRID {
-  --grid: 10px;
+  --grid-inline: 24px;
+  --grid-block: 10px;
   position: fixed;
   inset: 0;
-  background-image: linear-gradient(hsla(0, 0%, 0%, 0.05) var(--grid), hsla(0, 0%, 0%, 0) var(--grid));
-  background-size: 100% calc(var(--grid) * 2);
+  background-image:
+    linear-gradient(hsla(0, 0%, 0%, 0.02) var(--grid-block), hsla(0, 0%, 0%, 0) var(--grid-block)),
+    linear-gradient(90deg, hsla(0, 0%, 0%, 0.02) var(--grid-inline), hsla(0, 0%, 0%, 0) var(--grid-inline));
+  background-size:
+    100% calc(var(--grid-block) * 2),
+    calc(var(--grid-inline) * 2) 100%;
+  background-position:
+    top,
+    calc(50% - var(--grid-inline) * .5);
   pointer-events: none;
 }
