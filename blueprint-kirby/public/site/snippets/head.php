@@ -12,8 +12,10 @@
 
 	<title><?= $page->isHomePage() ? $site->title()->esc('attr') : $page->title()->esc('attr') . ' – ' . $site->title()->esc('attr') ?></title>
 
-	<link rel="apple-touch-icon" href="<?= hashedUrl('/assets/images/apple-touch-icon.png') ?>"><!-- Optional -->
-	<link rel="shortcut icon" href="<?= hashedUrl('/assets/images/favicon.png') ?>">
+	<link rel="icon" href="/favicon.ico" sizes="any"><!-- 32×32 -->
+  <link rel="icon" href="<?= hashedUrl('/assets/images/icon.svg') ?>" type="image/svg+xml">
+  <link rel="apple-touch-icon" href=<?= hashedUrl('/assets/images/apple-touch-icon.png') ?>"><!-- 180×180 -->
+  <link rel="manifest" href="<?= url('/site.webmanifest') ?>">
 
 	<meta name="robots" content="index, follow"><!-- Optional -->
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
