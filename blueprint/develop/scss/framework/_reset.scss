@@ -7,6 +7,9 @@ html {
   font-family: system-ui, sans-serif;
   /* 1rem equals 10px, when 16px is default font-size */
   font-size: 62.5%;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: none;
   color-scheme: dark light;
 }
@@ -20,10 +23,7 @@ body {
   margin: 0;
   min-block-size: 100%;
   min-block-size: 100dvb;
-  line-height: 1.5;
   font-size: 1.6rem;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 dialog {
