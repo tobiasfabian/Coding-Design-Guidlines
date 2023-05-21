@@ -1,0 +1,8 @@
+label: Meta Description
+type: textarea
+buttons: false
+validate:
+  max: 500
+help: |
+  Dieser Text ist wichtig für Suchmaschinen und erscheint außerdem auf Facebook, wenn diese Seite geteilt wird. Der Text sollte zirka 160 Zeichen lang sein.
+  [Weitere Details (Google)](https://developers.google.com/search/docs/appearance/snippet?hl=de#meta-descriptions)
