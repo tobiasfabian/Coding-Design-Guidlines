@@ -1,26 +1,26 @@
 title: Home
 
 tabs:
-  content:
-    label: Inhalt
-    icon: page
-    sections:
-      fields:
-        fields:
-          text:
-            type: markdown
-  meta:
-    label: Meta
-    icon: search
-    sections:
-      metaFields:
-        type: fields
-        fields:
-          metaDescription:
-            extends: fields/metaDescription
-  files:
-    label: Dateien
-    icon: file
-    sections:
-      files:
-        type: files
+	content:
+		label: Inhalt
+		icon: page
+		sections:
+			fields:
+				fields:
+					text:
+						type: markdown
+	meta:
+		label: Meta
+		icon: search
+		sections:
+			metaFields:
+				type: fields
+				fields:
+					metaDescription:
+						extends: fields/metaDescription
+	files:
+		label: Dateien
+		icon: file
+		sections:
+			files:
+				type: files

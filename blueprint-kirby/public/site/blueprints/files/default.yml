@@ -1,3 +1,3 @@
 fields:
-  alt:
-    extends: fields/alt
+	alt:
+		extends: fields/alt
