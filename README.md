@@ -1,4 +1,5 @@
 # Design Guidlines
+Version 1.1.0
 
 ## Table of Contents
 
