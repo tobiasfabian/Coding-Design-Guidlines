@@ -3,7 +3,7 @@
 ## Table of Contents
 
 - [Writing JavaScript](js/README.md)
-- [Writing (S)CSS](css/README.md)
+- [Writing CSS](css/README.md)
 - [Writing HTML](html/README.md)
 
 
