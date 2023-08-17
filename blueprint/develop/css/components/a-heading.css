@@ -1,0 +1,28 @@
+.a-heading {
+	font: var(--font--heading-xxlarge);
+}
+
+h1.a-heading,
+.a-heading.-xxlarge {
+	font: var(--font--heading-xxlarge);
+}
+h2.a-heading,
+.a-heading.-xlarge {
+	font: var(--font--heading-xlarge);
+}
+h3.a-heading,
+.a-heading.-large {
+	font: var(--font--heading-large);
+}
+h4.a-heading,
+.a-heading.-medium {
+	font: var(--font--heading-medium);
+}
+h5.a-heading,
+.a-heading.-small {
+	font: var(--font--heading-small);
+}
+h5.a-heading,
+.a-heading.-xsmall {
+	font: var(--font--heading-xsmall);
+}

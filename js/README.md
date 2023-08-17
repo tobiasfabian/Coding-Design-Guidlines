@@ -18,80 +18,80 @@ The `index.js` (or other JavaScript files in the JavaScript root directory) impo
 
 ### Order within `constructor`
 - super
-  `super(elememt)`
+	`super(elememt)`
 - element variables
-  `const loremElement = element.querySelector(…)`  
-  `const loremElements = element.querySelectorAll(…)`
+	`const loremElement = element.querySelector(…)`  
+	`const loremElements = element.querySelectorAll(…)`
 - other variables
-  `const lorem = …`
+	`const lorem = …`
 - class element properties
-  `this.loremElement = …`  
-  `this.loremElements = …`
+	`this.loremElement = …`  
+	`this.loremElements = …`
 - class properties
-  `this.lorem = …`
+	`this.lorem = …`
 - functions
-  `function lorem() {…}`
+	`function lorem() {…}`
 - event functions
-  `function onLorem() {…}`
+	`function onLorem() {…}`
 - event listeners
-  `loremElement.addEventListener('lorem', onLorem)`
+	`loremElement.addEventListener('lorem', onLorem)`
 - init
-  Run functions or method functions.
+	Run functions or method functions.
 
 ### Order of methods
 - constructor
-  `constructor(element) {}`
+	`constructor(element) {}`
 - gets
-  `get isInView() {}`
+	`get isInView() {}`
 - methods
-  `lorem() {}`
+	`lorem() {}`
 - event methods
-  `onLorem() {}`
+	`onLorem() {}`
 - init method
-  `init() {}`
-  
+	`init() {}`
+	
 ### Example
 ```js
 import AbstractElement from '../configs/abstract-element';
 
 class AField extends AbstractElement {
-  constructor(element) {
-    // super
-    super(element);
+	constructor(element) {
+		// super
+		super(element);
 
-    // variables
-    const { theme } = element.dataset;
+		// variables
+		const { theme } = element.dataset;
 
-    // class properties
-    this.element = element;
-    this.inputElement = element.querySelector('input');
+		// class properties
+		this.element = element;
+		this.inputElement = element.querySelector('input');
 
-    // functions
-    function lorem() {
-      // …
-    }
+		// functions
+		function lorem() {
+			// …
+		}
 
-    // event functions
-    function onChange() {
-      // …
-    }
+		// event functions
+		function onChange() {
+			// …
+		}
 
-    // event listeners
-    if (theme === 'positive') {
-      this.inputElement.addEventListener('change', onChange);
-    }
+		// event listeners
+		if (theme === 'positive') {
+			this.inputElement.addEventListener('change', onChange);
+		}
 
-    // init
-    this.init();
-  }
+		// init
+		this.init();
+	}
 
-  get value() {
-    return this.inputElement.value;
-  }
+	get value() {
+		return this.inputElement.value;
+	}
 
-  init() {
-    // …
-  }
+	init() {
+		// …
+	}
 }
 
 export default AField;

@@ -1,43 +1,43 @@
 import AbstractElement from '../configs/abstract-element';
 
 class AField extends AbstractElement {
-  constructor(element) {
-    // super
-    super(element);
+	constructor(element) {
+		// super
+		super(element);
 
-    // variables
-    const { theme } = element.dataset;
+		// variables
+		const { theme } = element.dataset;
 
-    // class properties
-    this.element = element;
-    this.inputElement = element.querySelector('input');
+		// class properties
+		this.element = element;
+		this.inputElement = element.querySelector('input');
 
-    // functions
-    function lorem() {
-      // …
-    }
+		// functions
+		function lorem() {
+			// …
+		}
 
-    // event functions
-    function onChange() {
-      // …
-    }
+		// event functions
+		function onChange() {
+			// …
+		}
 
-    // event listeners
-    if (theme === 'positive') {
-      this.inputElement.addEventListener('change', onChange);
-    }
+		// event listeners
+		if (theme === 'positive') {
+			this.inputElement.addEventListener('change', onChange);
+		}
 
-    // init
-    this.init();
-  }
+		// init
+		this.init();
+	}
 
-  get value() {
-    return this.inputElement.value;
-  }
+	get value() {
+		return this.inputElement.value;
+	}
 
-  init() {
-    // …
-  }
+	init() {
+		// …
+	}
 }
 
 export default AField;

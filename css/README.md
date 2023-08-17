@@ -1,15 +1,15 @@
-# Writing (S)CSS
+# Writing CSS
 
-SCSS files in the `/develop/scss` directory (*scss root*) contain only imports, but no custom rules. These files are compiled to (`/public/assets/css`).
+CSS files in the `/develop/css` directory (*css-root*) contain only imports, but no custom rules. These files are compiled to (`/public/assets/css`).
 
-In the *scss-root* there is an `index.scss` file. This file contains all fonts, libraries, configs, helpers and components that are relevant for most of the whole website.
+In the *css-root* there is an `index.css` file. This file contains all fonts, libraries, configs, helpers and components that are relevant for most of the whole website.
 
-For special pages a separate SCSS file can be created. For example, this file can contain large libraries and/or components that are only relevant for certain pages/templates. Not everything needs to be placed in the index.scss. Thus, the index.css can be kept small. The load time of the web pages are optimized thereby.
+For special pages a separate CSS file can be created. For example, this file can contain large libraries and/or components that are only relevant for certain pages/templates. Not everything needs to be placed in the index.css. Thus, the index.css can be kept small. The load time of the web pages are optimized thereby.
 
 <details>
-<summary>What should be swapped out to a separate scss file?</summary>
+<summary>What should be swapped out to a separate css file?</summary>
 
-In general, large CSS libraries (for example mapbox-gl.css) that are only needed on certain pages should not be imported into index.scss.
+In general, large CSS libraries (for example mapbox-gl.css) that are only needed on certain pages should not be imported into index.css.
 
 </details>
 
@@ -64,19 +64,19 @@ Nesting makes writing CSS much easier. But when it's overused, the specificity i
 
 ### Blocks and Elements
 
-Each block get’s its own file (e.g. `components/_m-alert-banner.scss`. The file starts with the rule of the *Block* selector itself. The *Block* selector is followed by the *Element* selectors.
+Each block get’s its own file (e.g. `components/_m-alert-banner.css`. The file starts with the rule of the *Block* selector itself. The *Block* selector is followed by the *Element* selectors.
 
-```scss
+```css
 .m-alert-banner {
-  …
+	…
 }
 
 .m-alert-banner__heading {
-  …
+	…
 }
 
 .m-alert-banner__buttons {
-  …
+	…
 }
 ```
 
@@ -86,19 +86,19 @@ Each block get’s its own file (e.g. `components/_m-alert-banner.scss`. The fil
 
 *Modifiers* are written inside of each *Block* or *Element*. Preferably only *Blocks* do have *Modifiers*, but *Elements* can have *Modifiers* too.
 
-```scss
+```css
 .m-alert-banner {
-  &.-danger {
-    …
-  }
+	&.-danger {
+		…
+	}
 }
 ```
 #### Element with Block Modifier
-```scss
+```css
 .m-alert-banner__heading {
-  .m-alert-banner.-danger & {
-    …
-  }
+	.m-alert-banner.-danger & {
+		…
+	}
 }
 ```
 
@@ -106,15 +106,15 @@ Each block get’s its own file (e.g. `components/_m-alert-banner.scss`. The fil
 
 Inside a *Block*/*Element* there might be rules for other DOM elements. To avoid conflicts these rules should be very specific. Namely DOM elements should be selected only with the [Child combinator](https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator).
 
-```scss
+```css
 .m-alert-banner {
-  > h2 {
-    …
-    
-    > span {
-      …
-    }
-  }
+	> h2 {
+		…
+		
+		> span {
+			…
+		}
+	}
 }
 ```
 
@@ -126,88 +126,88 @@ The rules inside of a *Block*/*Element* could be very long that’s why a specif
 
 - [`@keyframes`](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes)
 - Properties  
-  See [*Order of properties*](#order-of-properties)
+	See [*Order of properties*](#order-of-properties)
 - [Pseudeo-elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)  
-  `&::after`, `::backdrop`
+	`&::after`, `::backdrop`
 - [Child combinator](https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator)  
-  `> h1`
+	`> h1`
 - [Adjacent sibling combinator](https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator) in combination with *Child combinator*   
-  This is used to define how elements behave against other elements. E.g. the `margin-block-start` of a `p` element after a `h1` element. (See [The Stack: Every Layout](https://every-layout.dev/layouts/stack/))  
-  `> h1 + p` 
+	This is used to define how elements behave against other elements. E.g. the `margin-block-start` of a `p` element after a `h1` element. (See [The Stack: Every Layout](https://every-layout.dev/layouts/stack/))  
+	`> h1 + p` 
 - *Modifiers* ([Element with Block Modifier](#element-with-block-modifier))  
-  `.m-alert-banner.-danger &`
+	`.m-alert-banner.-danger &`
 - *Modifiers*  
-  `&.-danger`
+	`&.-danger`
 - `@supports` rules
 - [Pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)  
-  `:hover`, `:focus-visible`
+	`:hover`, `:focus-visible`
 - *Adjacent sibling combinator* for the *Block*/*Element* itself  
-  This is used to define how this *Block*/*Element* behaves against other *Blocks*/*Elements* of the same kind.  
-  `& + &`
+	This is used to define how this *Block*/*Element* behaves against other *Blocks*/*Elements* of the same kind.  
+	`& + &`
 - *Adjacent sibling combinator* for the *Block*/*Element* against other *Blocks*/*Elements*  
-  This is used to define how this *Block*/*Element* behaves against other *Blocks*/*Elements*.  
-  `.m-form + &`
+	This is used to define how this *Block*/*Element* behaves against other *Blocks*/*Elements*.  
+	`.m-form + &`
 - `@media` queries  
-  `(min-width: …)` before `not all and (min-width: …)`
+	`(min-width: …)` before `not all and (min-width: …)`
 
 #### Fictive example
 
-```scss
+```css
 .m-alert-banner {
-  @keyframes pulse {
-    …
-  }
-  
-  --var-lorem: …;
+	@keyframes pulse {
+		…
+	}
+	
+	--var-lorem: …;
 
-  padding: 1rem;
-  border: 2px solid var(--color-alert);
-  animation-name: pulse;
-  …
-  
-  > h2 {
-    font-size: …;
-  }
-  > p {
-    …
-  }
-  
-  > h2 + p {
-    margin-block-start: 1rem;
-  }
-  
-  &.-danger {
-    …
-  }
-  
-  @supports (…) {
-    …
-    
-    &.-danger {
-      …
-    }
-  }
-  
-  &:focus-inside {
-    > h2 {
-      …
-    }
-  }
+	padding: 1rem;
+	border: 2px solid var(--color-alert);
+	animation-name: pulse;
+	…
+	
+	> h2 {
+		font-size: …;
+	}
+	> p {
+		…
+	}
+	
+	> h2 + p {
+		margin-block-start: 1rem;
+	}
+	
+	&.-danger {
+		…
+	}
+	
+	@supports (…) {
+		…
+		
+		&.-danger {
+			…
+		}
+	}
+	
+	&:focus-inside {
+		> h2 {
+			…
+		}
+	}
 
-  & + & {
-    margin-block-start: 1rem;
-  }
-  
-  .m-form + & {
-    …
-  }
-  
-  @media (min-width: …) {
-    …
-  }
-  @media not all and (min-width: …) {
-    …
-  }
+	& + & {
+		margin-block-start: 1rem;
+	}
+	
+	.m-form + & {
+		…
+	}
+	
+	@media (min-width: …) {
+		…
+	}
+	@media not all and (min-width: …) {
+		…
+	}
 }
 ```
 
@@ -217,24 +217,25 @@ The rules inside of a *Block*/*Element* could be very long that’s why a specif
 
 When it’s needed to style a *Block* depended on another *Block*, this could be achieved like this:
 
-```scss
+```css
 .a-button {
+		…
 
-  .m-alert-banner & {
-    background-color: …;
-  }
+	.m-alert-banner & {
+		background-color: …;
+	}
 }
 ```
 
 This syntax should be avoided. What if the `a-button` is inside a `m-dialog` (which is inside of `m-alert-banner`). `a-button` will get the background-color which might not be the intended behavior.  
 Modifiers should be used instead.
 
-```scss
+```css
 .a-button {
 
-  &.-alert {
-    background-color: …;
-  }
+	&.-alert {
+		background-color: …;
+	}
 }
 ```
 
@@ -246,51 +247,44 @@ A mobile-first approach should be followed. In most cases, the user interface de
 To add specific styles for smaller devices the `(min-width)` rule can be negated like this `@media not all and (min-width: …)`
 
 
-## Other SCSS Features
-
-SCSS comes with great features like *Variables*, *Mixins*, *Extend/Inheritance* and *Math Operators*. These features have their merits, but they are not needed for this Style Guide. They partly contradict the modular idea of BEM and Atomic Design (*Mixins*, *Extend/Inheritance*). Other features like *Variables* and *Math Operators* have their counterpart in plain CSS nowadays, which should always be preferred.
-
-At some point in the future, [CSS Nesting](https://caniuse.com/css-nesting) may be used, at which point SCSS will no longer be needed.
-
-
 ## Order of properties
 
 There are about 400 CSS properties. To quickly find the right property there is the following order. The list is incomplete. Missing properties can be sorted accordingly.
 
 - variables
-  `--var-*`
+	`--var-*`
 - generated content  
-  `content`
+	`content`
 - appearance  
-  `position`, `display`, `appearance`, `opacity`, `visibility`, `cursor`, `pointer-events`
-  - clipping  
-    `clip-path`, `overflow`
+	`position`, `display`, `appearance`, `opacity`, `visibility`, `cursor`, `pointer-events`
+	- clipping  
+		`clip-path`, `overflow`
 - positioning
-    - size  
-      `box-sizing`, `width`, `height`, `[min|max]-[width|heigh]`,
-    - grid/flex (Properties for the Children)  
-      `grid-[row|column]-[start|end]`  
-      `flex-base`, `flex-shrink`, `flex-grow`  
-      `justify-self`, `align-self`
-    - inset/margin  
-      `inset`, `z-index`, `margin`
-    - `translate`  
+		- size  
+			`box-sizing`, `width`, `height`, `[min|max]-[width|heigh]`,
+		- grid/flex (Properties for the Children)  
+			`grid-[row|column]-[start|end]`  
+			`flex-base`, `flex-shrink`, `flex-grow`  
+			`justify-self`, `align-self`
+		- inset/margin  
+			`inset`, `z-index`, `margin`
+		- `translate`  
 - border  
-  `box-shadow`, `border`, `border-radius`, `outline`
+	`box-shadow`, `border`, `border-radius`, `outline`
 - padding  
-  `padding-[inline|block]`
+	`padding-[inline|block]`
 - content  
-    - grid/flex (Properties for the Parent)   
-      `grid-template-[columns|rows]`, `[justify|align]-[content|items]`, `gap`
-    - lists/columns/table  
-      `list-style`, `columns`, `border-collapse`
-    - typography  
-      `text-[align|transform|...]`  
-      `line-height`, `letter-spacing`  
-      `font-[size|weight|...]`  
-      `white-space`, `hyphens`  
-      `color`
+		- grid/flex (Properties for the Parent)   
+			`grid-template-[columns|rows]`, `[justify|align]-[content|items]`, `gap`
+		- lists/columns/table  
+			`list-style`, `columns`, `border-collapse`
+		- typography  
+			`text-[align|transform|...]`  
+			`line-height`, `letter-spacing`  
+			`font-[size|weight|...]`  
+			`white-space`, `hyphens`  
+			`color`
 - background  
-  `background-[image|color|...]`, `backdrop-filter`
+	`background-[image|color|...]`, `backdrop-filter`
 - animation  
-  `transition`, `animation`, `will-change`
+	`transition`, `animation`, `will-change`

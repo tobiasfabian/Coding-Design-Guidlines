@@ -6,22 +6,22 @@ For better grouping, one line can be left blank between two elements. Two blank 
 
 ```html
 <header>
-  …
+	…
 </header>
 
 <main>
-  <div>
-    <span></span>
-    <span></span>
-    
-    <h1></h1>
-    
-    <p></p>
-  </div>
+	<div>
+		<span></span>
+		<span></span>
+		
+		<h1></h1>
+		
+		<p></p>
+	</div>
 </main>
 
 <footer>
-  …
+	…
 </footer>
 ```
 
@@ -31,12 +31,12 @@ Normally attributes are written inline. If there are more than three attributes,
 
 ```html
 <header
-  id="header"
-  class="o-header"
-  data-example="*"
-  aria-describedby="header-heading"
+	id="header"
+	class="o-header"
+	data-example="*"
+	aria-describedby="header-heading"
 >
-  …
+	…
 </header>
 ```
 
@@ -58,9 +58,9 @@ If an HTML element is both a *block* and an *element* (BEM methology), the *bloc
 
 ```html
 <a 
-  class="
-    m-teaser__link -external 
-    a-button -positive
-  "
+	class="
+		m-teaser__link -external 
+		a-button -positive
+	"
 >…</a>
 ```

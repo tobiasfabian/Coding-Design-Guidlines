@@ -19,13 +19,13 @@ The terms *Block* (BEM method) and *Component* (Atomic Design) have the same mea
 
 Atomic Design distinguishes between the following *Components*.
 - **Atoms** (`a`)
-    > Atoms serve as the foundational building blocks that comprise all our user interfaces. These atoms include basic HTML elements like form labels, inputs, buttons, and others that can’t be broken down any further.
+		> Atoms serve as the foundational building blocks that comprise all our user interfaces. These atoms include basic HTML elements like form labels, inputs, buttons, and others that can’t be broken down any further.
 - **Molecules** (`m`) 
-    > Molecules are relatively simple groups of UI elements functioning together as a unit. For example, a form label, search input, and button can join together to create a search form molecule.
+		> Molecules are relatively simple groups of UI elements functioning together as a unit. For example, a form label, search input, and button can join together to create a search form molecule.
 - **Organisms** (`o`) 
-    > Organisms are relatively complex UI components composed of groups of molecules and/or atoms and/or other organisms. These organisms form distinct sections of an interface.
+		> Organisms are relatively complex UI components composed of groups of molecules and/or atoms and/or other organisms. These organisms form distinct sections of an interface.
 - **Templates** (`t`)  
-    > Templates are page-level objects that place components into a layout and articulate the design’s underlying content structure.
+		> Templates are page-level objects that place components into a layout and articulate the design’s underlying content structure.
 
 ### Example
 
@@ -34,30 +34,30 @@ An *Atom* (`a`) component called *field*.
 
 ```html
 <div class="a-field -secondary">
-  <label>Lorem</label>
-  <span class="a-field__counter">5</span>
-  <input value="Ipsum" type="text">
+	<label>Lorem</label>
+	<span class="a-field__counter">5</span>
+	<input value="Ipsum" type="text">
 </div>
 ```
 
 <details>
-<summary>CSS: <code>/develop/scss/components/_a-field.scss</code></summary>
+<summary>CSS: <code>/develop/css/components/a-field.css</code></summary>
 
-```scss
+```css
 .a-field {
-  > label {
-    font-weight: 700;
-  }
-  
-  &.-secondary {
-    > label {
-      color: gray;
-    }
-  }
+	> label {
+		font-weight: 700;
+	}
+	
+	&.-secondary {
+		> label {
+			color: gray;
+		}
+	}
 }
 
 .a-field__counter {
-  font-size: 0.8em;
+	font-size: 0.8em;
 }
 ```
 
@@ -68,16 +68,16 @@ An *Atom* (`a`) component called *field*.
 
 ```js
 class AField {
-  constructor(element) {
-    const inputElement = element.querySelector('input');
-    const counterElement = element.querySelector('.a-field__counter');
-    
-    function onInputChange() {
-      counterElement.innerText = inputElement.value.length;
-    }
-    
-    inputElement.addEventListener('change', onInputChange);
-  }
+	constructor(element) {
+		const inputElement = element.querySelector('input');
+		const counterElement = element.querySelector('.a-field__counter');
+		
+		function onInputChange() {
+			counterElement.innerText = inputElement.value.length;
+		}
+		
+		inputElement.addEventListener('change', onInputChange);
+	}
 }
 
 export default AField;
@@ -94,101 +94,101 @@ Compilation is done by `npm run` command ([npm scripts](https://docs.npmjs.com/c
 The following scripts/commands should be available in every project:
 
 - `npm run js`  
-    Compiles JavaScript to work in all browsers to be supported. The JavaScript is minified. Source maps are created.  
-  
-    ```json
-    "js": "npx webpack --config webpack.config.js",
-    ```
-    
+		Compiles JavaScript to work in all browsers to be supported. The JavaScript is minified. Source maps are created.  
+	
+		```json
+		"js": "npx webpack --config webpack.config.js",
+		```
+		
 - `npm run js-dev`  
-    Compiles JavaScript and activates a watcher. The JavaScript is recompiled when a relevant file changes. The JavaScript supports only the browsers used by the developer. It is not minified to facilitate debugging and to reduce compilation time. Source maps are created.  
-  
-    ```json
-    "js": "npx webpack --config webpack.config.dev.js",
-    ```
-  
+		Compiles JavaScript and activates a watcher. The JavaScript is recompiled when a relevant file changes. The JavaScript supports only the browsers used by the developer. It is not minified to facilitate debugging and to reduce compilation time. Source maps are created.  
+	
+		```json
+		"js": "npx webpack --config webpack.config.dev.js",
+		```
+	
 - `npm run js-lint`  
-    Checks and corrects all JavaScript files with [*eslint*](https://eslint.org).  
-  
-    ```json
-    "js-lint": "npx eslint --fix develop/js",
-    ```
-  
-- `npm run scss`  
-    Compiles and minifies SASS. Source maps are created.  
-  
-    ```json
-    "scss": "npx sass --style=compressed --embed-sources develop/scss:public/assets/css",
-    ```
-  
-- `npm run scss-dev`  
-    Compiles SASS and starts a watcher. The CSS files are not minified. Source maps are created.  
-  
-    ```json
-    "scss-dev": "npx sass --watch --embed-sources develop/scss:public/assets/css",
-    ```
-  
+		Checks and corrects all JavaScript files with [*eslint*](https://eslint.org).  
+	
+		```json
+		"js-lint": "npx eslint --fix develop/js",
+		```
+	
+- `npm run css`  
+		Compiles and minifies SASS. Source maps are created.  
+	
+		```json
+		"css": "npx sass --style=compressed --embed-sources develop/css:public/assets/css",
+		```
+	
+- `npm run css-dev`  
+		Compiles SASS and starts a watcher. The CSS files are not minified. Source maps are created.  
+	
+		```json
+		"css-dev": "npx sass --watch --embed-sources develop/css:public/assets/css",
+		```
+	
 - `npm run build`  
-    Compiles JavaScript and SASS.  
-  
-    ```json
-    "build": "npm run scss; npm run js-lint; npm run js;"
-    ```
+		Compiles JavaScript and SASS.  
+	
+		```json
+		"build": "npm run css; npm run js-lint; npm run js;"
+		```
 
 
 ## Folder structure
 
 - `domainname.tld`
-    - `develop`
-        - `js`
-            - `components`
-                - `a-*.js`
-                - `t-*.js`
-                - `m-*.js`
-                - `o-*.js`
-            - `framework`
-                - `*.js`
-            - `libraries`
-                - `*.js`
-            - `index.js`
-            - `*.js`
-        - `scss`
-            - `components`
-                - `_a-*.scss`
-                - `_t-*.scss`
-                - `_m-*.scss`
-                - `_o-*.scss`
-            - `framework`
-                - `_fonts.scss`
-                - `_reset.scss`
-                - `_variables.scss`
-            - `libraries`
-                - `_*.scss`
-            - `index.scss`
-            - `*.scss`
-    - `public`
-        - `assets`
-            - `css`
-                - `index.css`
-                - `*.scss`
-            - `fonts`
-                - `*.woff2`
-            - `images`
-                - `apple-touch-icon.png`
-                - `favicon.png`
-                - `*.webp`
-                - `*.svg`
-            - `js`
-                - `index.js`
-                - `*.js`
-        - `index.[html|php]`
-    - `.babelrc`
-    - `.browserslistrc`
-    - `.connect-to-server`
-    - `.editorconfig`
-    - `.eslintrc`
-    - `.gitignore`
-    - `package.json`
+	- `develop`
+		- `js`
+			- `components`
+				- `a-*.js`
+				- `t-*.js`
+				- `m-*.js`
+				- `o-*.js`
+			- `framework`
+				- `*.js`
+			- `libraries`
+				- `*.js`
+			- `index.js`
+			- `*.js`
+		- `css`
+			- `components`
+				- `a-*.css`
+				- `t-*.css`
+				- `m-*.css`
+				- `o-*.css`
+			- `framework`
+				- `fonts.css`
+				- `reset.css`
+				- `variables.css`
+			- `libraries`
+				- `*.css`
+			- `index.css`
+			- `*.css`
+	- `public`
+		- `assets`
+			- `css`
+				- `index.css`
+				- `*.css`
+			- `fonts`
+				- `*.woff2`
+			- `images`
+				- `apple-touch-icon.png`
+				- `favicon.png`
+				- `*.webp`
+				- `*.svg`
+			- `js`
+				- `index.js`
+				- `*.js`
+		- `index.[html|php]`
+	- `.babelrc`
+	- `.browserslistrc`
+	- `.connect-to-server`
+	- `.editorconfig`
+	- `.eslintrc`
+	- `.gitignore`
+	- `package.json`
 
 
 ## Appendix
