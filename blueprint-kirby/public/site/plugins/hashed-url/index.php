@@ -1,9 +1,11 @@
 <?php
+
+use Kirby\Cms\App;
 use Kirby\Filesystem\F;
 
 function hashedUrl($path) {
 	$file = kirby()->roots()->index() . DIRECTORY_SEPARATOR . $path;
-	if (!option('tw.hashed-url', true) || !file_exists($file)) {
+	if (!option('tobiaswolf.hashed-url', true) || !file_exists($file)) {
 		return url($path);
 	}
 	$asset = dirname($path) . '/';
@@ -13,4 +15,4 @@ function hashedUrl($path) {
 	return url($asset);
 }
 
-Kirby::plugin('tw/hashed-url', []);
+App::plugin('tobiaswolf/hashed-url', []);
