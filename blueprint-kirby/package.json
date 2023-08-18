@@ -15,7 +15,7 @@
 		"@babel/cli": "^7.22.10",
 		"@babel/core": "^7.22.10",
 		"@babel/preset-env": "^7.22.10",
-		"@csstools/postcss-color-mix-function": "^1.0.3",
+		"@csstools/postcss-color-mix-function": "^2.0.1",
 		"@csstools/postcss-oklab-function": "^2.2.3",
 		"autoprefixer": "^10.4.15",
 		"babel-loader": "^8.3.0",
