@@ -43,17 +43,17 @@ Example: `--font-family--heading` instead of `--font-family--serif`.
 <details>
 <summary><strong>Colors</strong></summary>
 
-Colors can be named according to their appearance. You should use `--color--red` if you want something to be red. But if you want to indicate that something might have a negative effect, you should use `--color--negative`. This could be an alias of `--color--red`.
+Colors can be named according to their appearance. You should use `--color-red` if you want something to be red. But if you want to indicate that something might have a negative effect, you should use `--color-negative`. This could be an alias of `--color-red`.
 
 For graduations of colors you should use the numbers used for `font-weight`, where 500 should be the default color.
 
 ```css
---color--red-300: hsl(0, 90%, 70%);
---color--red-400: hsl(0, 90%, 60%);
---color--red-500: hsl(0, 90%, 50%);
---color--red-600: hsl(0, 90%, 40%);
---color--red: var(--color--red-600);
---color--negative: var(--color--red);
+--color-red-300: hsl(0, 90%, 70%);
+--color-red-400: hsl(0, 90%, 60%);
+--color-red-500: hsl(0, 90%, 50%);
+--color-red-600: hsl(0, 90%, 40%);
+--color-red: var(--color-red-600);
+--color-negative: var(--color-red);
 ```
 </details>
 
