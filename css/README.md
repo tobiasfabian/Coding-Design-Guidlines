@@ -34,11 +34,11 @@ Variables should be named after the property for which they are intended.
 Example: `--transition-duration: 300ms` instead of `--transition: 300ms`.  
 `--transition: opacity 200ms linear` is fine, beacuse it describes the whole transition property.
 
-Most of the time, variables are meant for a specific *thing*. To describe this specific *thing*, use `--` to separate the attribute name from the *thing*.  
-Example: `--transition-duration--popup: 500ms`
+Most of the time, variables are meant for a specific *thing*. To describe this specific *thing*, use `-` to separate the attribute name from the *thing*.  
+Example: `--transition-duration-popup: 500ms`
 
 For *variables*, the rule that function is preferable over appearance also applies. 
-Example: `--font-family--heading` instead of `--font-family--serif`.
+Example: `--font-family-heading` instead of `--font-family-serif`.
 
 <details>
 <summary><strong>Colors</strong></summary>

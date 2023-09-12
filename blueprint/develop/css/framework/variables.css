@@ -12,74 +12,74 @@
 
 	/* Sizes */
 	--max-width: 160rem;
-	--max-width--content: 108rem;
-	--max-width--text: 68rem;
+	--max-width-content: 108rem;
+	--max-width-text: 68rem;
 
 	/* Typography */
 	--font-family: 'FONT NAME', sans-serif;
-	--font-family--display: serif;
-	--font-family--heading: serif;
+	--font-family-display: serif;
+	--font-family-heading: serif;
 
-	--font-size--display-large: 9.6rem;
-	--font-size--display-medium: 5.2rem;
-	--font-size--display-small: 5.2rem;
-	--font-size--display-xsmall: 3.6rem;
-	--font-size--heading-xxlarge: 4.0rem;
-	--font-size--heading-xlarge: 3.6rem;
-	--font-size--heading-large: 3.2rem;
-	--font-size--heading-medium: 2.8rem;
-	--font-size--heading-small: 2.4rem;
-	--font-size--heading-xsmall: 2.0rem;
-	--font-size--label-large: 1.8rem;
-	--font-size--label-medium: 1.6rem;
-	--font-size--label-small: 1.4rem;
-	--font-size--label-xsmall: 1.2rem;
-	--font-size--paragraphs-large: 1.8rem;
-	--font-size--paragraphs-medium: 1.6rem;
-	--font-size--paragraphs-small: 1.4rem;
-	--font-size--paragraphs-xsmall: 1.2rem;
-	--font-size: var(--font-size--paragraphs-medium);
+	--font-size-display-large: 9.6rem;
+	--font-size-display-medium: 5.2rem;
+	--font-size-display-small: 5.2rem;
+	--font-size-display-xsmall: 3.6rem;
+	--font-size-heading-xxlarge: 4.0rem;
+	--font-size-heading-xlarge: 3.6rem;
+	--font-size-heading-large: 3.2rem;
+	--font-size-heading-medium: 2.8rem;
+	--font-size-heading-small: 2.4rem;
+	--font-size-heading-xsmall: 2.0rem;
+	--font-size-label-large: 1.8rem;
+	--font-size-label-medium: 1.6rem;
+	--font-size-label-small: 1.4rem;
+	--font-size-label-xsmall: 1.2rem;
+	--font-size-paragraphs-large: 1.8rem;
+	--font-size-paragraphs-medium: 1.6rem;
+	--font-size-paragraphs-small: 1.4rem;
+	--font-size-paragraphs-xsmall: 1.2rem;
+	--font-size: var(--font-size-paragraphs-medium);
 
-	--line-height--display-large: calc(96 / 112);
-	--line-height--display-medium: calc(52 / 64);
-	--line-height--display-small: calc(52 / 52);
-	--line-height--display-xsmall: calc(36 / 44);
-	--line-height--heading-xxlarge: calc(40 / 52);
-	--line-height--heading-xlarge: calc(36 / 44);
-	--line-height--heading-large: calc(32 / 40);
-	--line-height--heading-medium: calc(28 / 36);
-	--line-height--heading-small: calc(24 / 32);
-	--line-height--heading-xsmall: calc(20 / 28);
-	--line-height--label-large: calc(18 / 24);
-	--line-height--label-medium: calc(16 / 20);
-	--line-height--label-small: calc(14 / 16);
-	--line-height--label-xsmall: calc(12 / 16);
-	--line-height--paragraphs-large: calc(28 / 18);
-	--line-height--paragraphs-medium: calc(24 / 16);
-	--line-height--paragraphs-small: calc(20 / 14);
-	--line-height--paragraphs-xsmall: calc(20 / 12);
-	--line-height: var(--line-height--paragraphs-medium);
+	--line-height-display-large: calc(96 / 112);
+	--line-height-display-medium: calc(52 / 64);
+	--line-height-display-small: calc(52 / 52);
+	--line-height-display-xsmall: calc(36 / 44);
+	--line-height-heading-xxlarge: calc(40 / 52);
+	--line-height-heading-xlarge: calc(36 / 44);
+	--line-height-heading-large: calc(32 / 40);
+	--line-height-heading-medium: calc(28 / 36);
+	--line-height-heading-small: calc(24 / 32);
+	--line-height-heading-xsmall: calc(20 / 28);
+	--line-height-label-large: calc(18 / 24);
+	--line-height-label-medium: calc(16 / 20);
+	--line-height-label-small: calc(14 / 16);
+	--line-height-label-xsmall: calc(12 / 16);
+	--line-height-paragraphs-large: calc(28 / 18);
+	--line-height-paragraphs-medium: calc(24 / 16);
+	--line-height-paragraphs-small: calc(20 / 14);
+	--line-height-paragraphs-xsmall: calc(20 / 12);
+	--line-height: var(--line-height-paragraphs-medium);
 
-	--font--display-large: 700 var(--font-size--display-large)/var(--line-height--display-large) var(--font-family--display);
-	--font--display-medium: 700 var(--font-size--display-medium)/var(--line-height--display-medium) var(--font-family--display);
-	--font--display-small: 700 var(--font-size--display-small)/var(--line-height--display-small) var(--font-family--display);
-	--font--display-xsmall: 700 var(--font-size--display-xsmall)/var(--line-height--display-xsmall) var(--font-family--display);
-	--font--heading-xxlarge: 700 var(--font-size--heading-xxlarge)/var(--line-height--heading-xxlarge) var(--font-family--heading);
-	--font--heading-xlarge: 700 var(--font-size--heading-xlarge)/var(--line-height--heading-xlarge) var(--font-family--heading);
-	--font--heading-large: 700 var(--font-size--heading-large)/var(--line-height--heading-large) var(--font-family--heading);
-	--font--heading-medium: 700 var(--font-size--heading-medium)/var(--line-height--heading-medium) var(--font-family--heading);
-	--font--heading-small: 700 var(--font-size--heading-small)/var(--line-height--heading-small) var(--font-family--heading);
-	--font--heading-xsmall: 700 var(--font-size--heading-xsmall)/var(--line-height--heading-xsmall) var(--font-family--heading);
-	--font--label-large: 400 var(--font-size--label-large)/var(--line-height--label-large) var(--font-family);
-	--font--label-medium: 400 var(--font-size--label-medium)/var(--line-height--label-medium) var(--font-family);
-	--font--label-small: 400 var(--font-size--label-small)/var(--line-height--label-small) var(--font-family);
-	--font--label-xsmall: 400 var(--font-size--label-xsmall)/var(--line-height--label-xsmall) var(--font-family);
-	--font--paragraphs-large: 400 var(--font-size--paragraphs-large)/var(--line-height--paragraphs-large) var(--font-family);
-	--font--paragraphs-medium: 400 var(--font-size--paragraphs-medium)/var(--line-height--paragraphs-medium) var(--font-family);
-	--font--paragraphs-small: 400 var(--font-size--paragraphs-small)/var(--line-height--paragraphs-small) var(--font-family);
-	--font--paragraphs-xsmall: 400 var(--font-size--paragraphs-xsmall)/var(--line-height--paragraphs-xsmall) var(--font-family);
+	--font-display-large: 700 var(--font-size-display-large)/var(--line-height-display-large) var(--font-family-display);
+	--font-display-medium: 700 var(--font-size-display-medium)/var(--line-height-display-medium) var(--font-family-display);
+	--font-display-small: 700 var(--font-size-display-small)/var(--line-height-display-small) var(--font-family-display);
+	--font-display-xsmall: 700 var(--font-size-display-xsmall)/var(--line-height-display-xsmall) var(--font-family-display);
+	--font-heading-xxlarge: 700 var(--font-size-heading-xxlarge)/var(--line-height-heading-xxlarge) var(--font-family-heading);
+	--font-heading-xlarge: 700 var(--font-size-heading-xlarge)/var(--line-height-heading-xlarge) var(--font-family-heading);
+	--font-heading-large: 700 var(--font-size-heading-large)/var(--line-height-heading-large) var(--font-family-heading);
+	--font-heading-medium: 700 var(--font-size-heading-medium)/var(--line-height-heading-medium) var(--font-family-heading);
+	--font-heading-small: 700 var(--font-size-heading-small)/var(--line-height-heading-small) var(--font-family-heading);
+	--font-heading-xsmall: 700 var(--font-size-heading-xsmall)/var(--line-height-heading-xsmall) var(--font-family-heading);
+	--font-label-large: 400 var(--font-size-label-large)/var(--line-height-label-large) var(--font-family);
+	--font-label-medium: 400 var(--font-size-label-medium)/var(--line-height-label-medium) var(--font-family);
+	--font-label-small: 400 var(--font-size-label-small)/var(--line-height-label-small) var(--font-family);
+	--font-label-xsmall: 400 var(--font-size-label-xsmall)/var(--line-height-label-xsmall) var(--font-family);
+	--font-paragraphs-large: 400 var(--font-size-paragraphs-large)/var(--line-height-paragraphs-large) var(--font-family);
+	--font-paragraphs-medium: 400 var(--font-size-paragraphs-medium)/var(--line-height-paragraphs-medium) var(--font-family);
+	--font-paragraphs-small: 400 var(--font-size-paragraphs-small)/var(--line-height-paragraphs-small) var(--font-family);
+	--font-paragraphs-xsmall: 400 var(--font-size-paragraphs-xsmall)/var(--line-height-paragraphs-xsmall) var(--font-family);
 
-	--leter-spacing--display: -0.003em;
+	--leter-spacing-display: -0.003em;
 
 	/* Color Primitives */
 	--color-white: hsla(0, 0%, 100%, 1);
@@ -153,8 +153,8 @@
 
 	/* Border */
 	--border-radius: 0.5rem;
-	--border-radius--button: 0.6rem;
-	--border-radius--small: 0.4rem;
+	--border-radius-button: 0.6rem;
+	--border-radius-small: 0.4rem;
 
 	@media (prefers-color-scheme: dark) {
 		/* Foundation Colors */
