@@ -246,6 +246,8 @@ A mobile-first approach should be followed. In most cases, the user interface de
 
 To add specific styles for smaller devices the `(min-width)` rule can be negated like this `@media not all and (min-width: …)`
 
+Use `em` units for media queries. [^1]
+
 
 ## Order of properties
 
@@ -288,3 +290,5 @@ There are about 400 CSS properties. To quickly find the right property there is 
 	`background-[image|color|...]`, `backdrop-filter`
 - animation  
 	`transition`, `animation`, `will-change`
+
+[^1]: [PX, EM or REM Media Queries? – Zell Liew](https://zellwk.com/blog/media-query-units/)
