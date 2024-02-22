@@ -1,31 +1,34 @@
-/* Fonts */
-@import 'fonts/FONT_NAME';
+/* Foundation */
+@import 'foundation/animations.css';
+@import 'foundation/colors.css';
+@import 'foundation/FONT_NAME.css';
+@import 'foundation/sizes.css';
+@import 'foundation/reset.css';
+@import 'foundation/typography.css';
 
-/* framework */
-@import 'framework/reset';
-@import 'framework/variables';
-@import 'framework/GRID'; /* HELPER/DEBUG */
+/* HELPER/DEBUG */
+@import 'foundation/DEBUG.css';
 
 /* Atoms */
-/* @import 'components/a-button'; */
-/* @import 'components/a-field'; */
-/* @import 'components/a-figure'; */
-@import 'components/a-heading';
-/* @import 'components/a-hr'; */
-/* @import 'components/a-icon'; */
-/* @import 'components/a-loading-indicator'; */
-/* @import 'components/a-table'; */
-@import 'components/a-text';
-@import 'components/a-trim-leading';
-@import 'components/a-visually-hidden';
+/* @import 'components/a-button.css'; */
+/* @import 'components/a-field.css'; */
+/* @import 'components/a-figure.css'; */
+@import 'components/a-heading.css';
+/* @import 'components/a-hr.css'; */
+/* @import 'components/a-icon.css'; */
+/* @import 'components/a-loading-indicator.css'; */
+/* @import 'components/a-table.css'; */
+@import 'components/a-text.css';
+@import 'components/a-trim-leading.css';
+@import 'components/a-visually-hidden.css';
 
 /* Molecules */
-/* @import 'components/m-teaser'; */
+/* @import 'components/m-teaser.css'; */
 
 /* Organisms */
-@import 'components/o-article';
-@import 'components/o-footer';
-/* @import 'components/o-main-nav'; */
+@import 'components/o-article.css';
+@import 'components/o-footer.css';
+/* @import 'components/o-main-nav.css'; */
 
 /* Templates */
-@import 'components/t-default';
+@import 'components/t-default.css';

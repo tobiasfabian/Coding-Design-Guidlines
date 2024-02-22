@@ -1,0 +1,25 @@
+html {
+	font-family: var(--font-family);
+	-webkit-hyphens: auto;
+	-webkit-hyphenate-limit-after: var(--hyphenate-limit);
+	-webkit-hyphenate-limit-before: var(--hyphenate-limit);
+
+	@supports (hyphenate-limit-chars: 16 8 8) {
+		html {
+			hyphens: auto;
+			hyphenate-limit-chars: calc(var(--hyphenate-limit) * 2) var(--hyphenate-limit) var(--hyphenate-limit)
+		}
+	}
+}
+
+body {
+	font: var(--font-paragraph-medium);
+	display: flex;
+	flex-direction: column;
+}
+
+html[data-no-scroll],
+html[data-no-scroll] & {
+	overflow: hidden;
+	block-size: 100%;
+}

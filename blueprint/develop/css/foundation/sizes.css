@@ -1,0 +1,19 @@
+/**
+ * Each size should divide by 4.
+ */
+
+:root {
+	/* Grid */
+	--gap-inline: calc(40rem / 16);
+	--gap-block: calc(40rem / 16);
+
+	/* Sizes */
+	--max-width: calc(1600rem / 16);
+	--max-width-content: calc(1080rem / 16);
+	--max-width-text: calc(680rem / 16);
+
+	/* Border */
+	--border-radius-small: calc(4rem / 16);
+	--border-radius-medium: calc(5rem / 16);
+	--border-radius-large: calc(6rem / 16);
+}

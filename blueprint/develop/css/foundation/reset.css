@@ -5,8 +5,6 @@
 
 html {
 	font-family: system-ui, sans-serif;
-	/* 1rem equals 10px, when 16px is default font-size */
-	font-size: 62.5%;
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -22,14 +20,17 @@ html {
 }
 
 body {
-	margin: 0;
 	min-block-size: 100%;
 	min-block-size: 100dvb;
-	font-size: 1.6rem;
 }
 
 dialog {
 	margin: auto;
+	border: 0;
+}
+
+[popover] {
+	border: 0;
 }
 
 a {
@@ -37,7 +38,7 @@ a {
 	text-underline-offset: 0.2ex;
 }
 
-img, svg, video, canvas, audio, iframe, embed, object {
+img, picture, svg, video, canvas, audio, iframe, embed, object, summary {
 	display: block;
 }
 
@@ -46,14 +47,21 @@ img, picture, svg {
 	block-size: auto;
 }
 
-iframe {
+p, h1, h2, h3, h4, h5, h6 {
+	overflow-wrap: break-word;
+}
+
+iframe, fieldset {
 	border: 0;
 }
 
-fieldset {
-	margin: 0;
+button {
+	text-align: start;
+}
+
+button, summary {
 	border: 0;
-	padding: 0;
+	cursor: pointer;
 }
 
 label {
@@ -63,8 +71,6 @@ label {
 input,
 textarea,
 button {
-	margin: 0;
-	padding: 0;
 	font: inherit;
 	line-height: inherit;
 	color: inherit;
@@ -91,32 +97,23 @@ textarea {
 	resize: block;
 }
 
-button {
-	text-align: start;
-}
-
-button, summary {
-	border: 0;
-	cursor: pointer;
-}
-
 hr {
 	border: none;
-	border-block-start: 1px solid;
+	border-block-start: 1px solid currentcolor;
 	color: inherit;
 	block-size: 0;
 	overflow: visible;
-}
-
-summary {
-	display: block;
 }
 
 table {
 	border-collapse: collapse;
 }
 
-:disabled {
+nav ul {
+	list-style: none;
+}
+
+:disabled, [aria-disabled="true"] {
 	cursor: not-allowed;
 }
 

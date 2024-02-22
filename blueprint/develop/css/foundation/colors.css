@@ -1,0 +1,129 @@
+/* Naming of colors and fonts inspired by Uber Base (https://base.uber.com/6d2425e9f/p/8898fb-color-legacy/b/065744) */
+
+:root {
+	/* Color Primitives */
+	--color-white: hsla(0, 0%, 100%, 1);
+	--color-gray-50: hsla(0, 0%, 95%, 1);
+	--color-gray-100: hsla(0, 0%, 90%, 1);
+	--color-gray-200: hsla(0, 0%, 80%, 1);
+	--color-gray-300: hsla(0, 0%, 70%, 1);
+	--color-gray-400: hsla(0, 0%, 60%, 1);
+	--color-gray-500: hsla(0, 0%, 50%, 1);
+	--color-gray-600: hsla(0, 0%, 40%, 1);
+	--color-gray-700: hsla(0, 0%, 30%, 1);
+	--color-gray-800: hsla(0, 0%, 20%, 1);
+	--color-gray-900: hsla(0, 0%, 10%, 1);
+	--color-gray-950: hsla(0, 0%, 5%, 1);
+	--color-black: hsla(0, 0%, 0%, 1);
+
+	--color-red-50: hsla(360, 100%, 95%, 1);
+	--color-red-100: hsla(360, 100%, 90%, 1);
+	--color-red-200: hsla(360, 100%, 80%, 1);
+	--color-red-300: hsla(360, 100%, 70%, 1);
+	--color-red-400: hsla(360, 100%, 60%, 1);
+	--color-red-500: hsla(360, 100%, 50%, 1);
+	--color-red-600: hsla(360, 100%, 40%, 1);
+	--color-red-700: hsla(360, 100%, 30%, 1);
+	--color-red-800: hsla(360, 100%, 20%, 1);
+	--color-red-900: hsla(360, 100%, 10%, 1);
+
+	--color-yellow-50: hsla(55, 100%, 95%, 1);
+	--color-yellow-100: hsla(55, 100%, 90%, 1);
+	--color-yellow-200: hsla(55, 100%, 80%, 1);
+	--color-yellow-300: hsla(55, 100%, 70%, 1);
+	--color-yellow-400: hsla(55, 100%, 60%, 1);
+	--color-yellow-500: hsla(55, 100%, 50%, 1);
+	--color-yellow-600: hsla(55, 100%, 40%, 1);
+	--color-yellow-700: hsla(55, 100%, 30%, 1);
+	--color-yellow-800: hsla(55, 100%, 20%, 1);
+	--color-yellow-900: hsla(55, 100%, 10%, 1);
+
+	/* Foundation Colors */
+	--color-negative: var(--color-red-400);
+	--color-warning: var(--color-yellow-400);
+	--color-positive: var(--color-green-400);
+
+	/* Core Colors */
+	--color-background-primary: var(--color-white);
+	--color-background-secondary: var(--color-gray-50);
+	--color-background-tertiary: var(--color-gray-100);
+	--color-background-primary-inverse: var(--color-black);
+	--color-background-secondary-inverse: var(--color-gray-800);
+
+	--color-content-primary: var(--color-black);
+	--color-content-secondary: var(--color-gray-600);
+	--color-content-tertiary: var(--color-gray-500);
+	--color-content-primary-inverse: var(--color-white);
+	--color-content-secondary-inverse: var(--color-gray-300);
+	--color-content-tertiary-inverse: var(--color-gray-400);
+
+	--color-border-opaque: var(--color-gray-200);
+	--color-border-transparent: color-mix(in hsl, var(--color-black) 8%, transparent);
+	--color-border-selected: var(--color-content-primary);
+	--color-border-opaque-inverse: var(--color-gray-700);
+	--color-border-transparent-inverse: color-mix(in hsl, var(--color-white) 8%, transparent);
+	--color-border-selected-inverse: var(--color-white);
+
+	/* Shadows */
+	--box-shadow: 0 1px 10px -calc(10rem / 16) rgba(0,0,0,0.1),
+	              0 1.5px 20px -calc(10rem / 16) rgba(0,0,0,0.1),
+	              0 2px 30px -calc(10rem / 16) rgba(0,0,0,0.1);
+
+	@media (prefers-color-scheme: dark) {
+		/* Foundation Colors */
+		--color-negative: var(--color-red-600);
+		--color-warning: var(--color-yellow-600);
+		--color-positive: var(--color-green-600);
+
+		/* Core Colors */
+		--color-background-primary: var(--color-gray-950);
+		--color-background-secondary: var(--color-gray-900);
+		--color-background-tertiary: var(--color-gray-800);
+		--color-background-primary-inverse: var(--color-gray-200);
+		--color-background-secondary-inverse: var(--color-gray-300);
+
+		--color-content-primary: var(--color-gray-100);
+		--color-content-secondary: var(--color-gray-200);
+		--color-content-tertiary: var(--color-gray-300);
+		--color-content-primary-inverse: var(--color-black);
+		--color-content-secondary-inverse: var(--color-gray-800);
+		--color-content-tertiary-inverse: var(--color-gray-700);
+
+		--color-border-opaque: var(--color-gray-900);
+		--color-border-transparent: color-mix(in hsl, var(--color-gray-100) 8%, transparent);
+		--color-border-selected: var(--color-gray-100);
+		--color-border-opaque-inverse: var(--color-gray-700);
+		--color-border-transparent-inverse: color-mix(in hsl, var(--color-gray-950) 20%, transparent);
+		--color-border-selected-inverse: var(--color-gray-950);
+	}
+
+	[data-theme="dark"] {
+		/* same as @media (prefers-color-scheme: dark) */
+
+		/* Foundation Colors */
+		--color-negative: var(--color-red-600);
+		--color-warning: var(--color-yellow-600);
+		--color-positive: var(--color-green-600);
+
+		/* Core Colors */
+		--color-background-primary: var(--color-gray-950);
+		--color-background-secondary: var(--color-gray-900);
+		--color-background-tertiary: var(--color-gray-800);
+		--color-background-primary-inverse: var(--color-gray-200);
+		--color-background-secondary-inverse: var(--color-gray-300);
+
+		--color-content-primary: var(--color-gray-100);
+		--color-content-secondary: var(--color-gray-200);
+		--color-content-tertiary: var(--color-gray-300);
+		--color-content-primary-inverse: var(--color-black);
+		--color-content-secondary-inverse: var(--color-gray-800);
+		--color-content-tertiary-inverse: var(--color-gray-700);
+
+		--color-border-opaque: var(--color-gray-900);
+		--color-border-transparent: color-mix(in hsl, var(--color-gray-100) 8%, transparent);
+		--color-border-selected: var(--color-gray-100);
+		--color-border-opaque-inverse: var(--color-gray-700);
+		--color-border-transparent-inverse: color-mix(in hsl, var(--color-gray-950) 20%, transparent);
+		--color-border-selected-inverse: var(--color-gray-950);
+	}
+}

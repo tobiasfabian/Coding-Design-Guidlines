@@ -242,11 +242,11 @@ Modifiers should be used instead.
 
 ## Media queries
 
-A mobile-first approach should be followed. In most cases, the user interface design for mobile devices is simpler than that for larger devices. Additional complexitiy (larger devices) is added to the simpler mobile styles. This is the reason why `@media (min-width: …)` should be used.
+A mobile-first approach should be followed. In most cases, the user interface design for mobile devices is simpler than that for larger devices. Additional complexity (larger devices) is added to the simpler mobile styles. This is the reason why `@media (min-width: …)` should be used.
 
 To add specific styles for smaller devices the `(min-width)` rule can be negated like this `@media not all and (min-width: …)`
 
-Use `em` units for media queries. [^1]
+Use `rem` unit for media and container queries. [^1]
 
 
 ## Order of properties
@@ -262,21 +262,21 @@ There are about 400 CSS properties. To quickly find the right property there is 
 	- clipping  
 		`clip-path`, `overflow`
 - positioning
-		- size  
-			`box-sizing`, `width`, `height`, `[min|max]-[width|heigh]`,
-		- grid/flex (Properties for the Children)  
+		- grid/flex (Properties for grid/flex item)  
 			`grid-[row|column]-[start|end]`  
 			`flex-base`, `flex-shrink`, `flex-grow`  
 			`justify-self`, `align-self`
 		- inset/margin  
 			`inset`, `z-index`, `margin`
-		- `translate`  
+		- size  
+			`box-sizing`, `inline|block-size` `width`, `height`, `[min|max]-[[inline|block]-size|width|height]`,
+		- `translate`
 - border  
 	`box-shadow`, `border`, `border-radius`, `outline`
 - padding  
 	`padding-[inline|block]`
 - content  
-		- grid/flex (Properties for the Parent)   
+		- grid/flex (Properties for grid/flex container)   
 			`grid-template-[columns|rows]`, `[justify|align]-[content|items]`, `gap`
 		- lists/columns/table  
 			`list-style`, `columns`, `border-collapse`
@@ -291,4 +291,4 @@ There are about 400 CSS properties. To quickly find the right property there is 
 - animation  
 	`transition`, `animation`, `will-change`
 
-[^1]: [PX, EM or REM Media Queries? – Zell Liew](https://zellwk.com/blog/media-query-units/)
+[^1]: [The Surprising Truth About Pixels and Accessibility – Joshua Comeau](https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility/#media-queries-7)

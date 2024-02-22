@@ -147,7 +147,7 @@ The following scripts/commands should be available in every project:
 				- `t-*.js`
 				- `m-*.js`
 				- `o-*.js`
-			- `framework`
+			- `foundation`
 				- `*.js`
 			- `libraries`
 				- `*.js`
@@ -159,10 +159,12 @@ The following scripts/commands should be available in every project:
 				- `t-*.css`
 				- `m-*.css`
 				- `o-*.css`
-			- `framework`
-				- `fonts.css`
+			- `foundation`
+				- `colors.css`
 				- `reset.css`
-				- `variables.css`
+				- `sizes.css`
+				- `typography.css`
+				- `*.css`
 			- `libraries`
 				- `*.css`
 			- `index.css`
