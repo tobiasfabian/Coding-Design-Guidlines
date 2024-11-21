@@ -2,8 +2,9 @@
 @import 'foundation/animations.css';
 @import 'foundation/colors.css';
 @import 'foundation/FONT_NAME.css';
-@import 'foundation/sizes.css';
+@import 'foundation/durations.css';
 @import 'foundation/reset.css';
+@import 'foundation/sizes.css';
 @import 'foundation/typography.css';
 
 /* HELPER/DEBUG */
